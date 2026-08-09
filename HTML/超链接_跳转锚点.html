@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>超链接_跳转锚点</title>
+</head>
+<body>
+    <a href="#dog">看小狗</a>
+    <a href="#cat">看小猫</a>
+    <a href="#fox">看狐狸</a>
+    <a href="#dog_2">看小狗2</a>
+
+    <a name="dog"></a>
+    <p>小狗</p>
+    <img src="../images/pet_01_dog.png" alt="小狗">
+    <a name="cat"></a>
+    <p>小猫</p>
+    <img src="../images/pet_02_cat.jpg" alt="小猫">
+    <a name="fox"></a>
+    <p>狐狸</p>
+    <img src="../images/pet_03_fox.jpg" alt="狐狸">
+    <!-- 第二种锚点实现方式，使用id属性 -->
+    <!-- 
+    
+        id属性不要以数字开头
+        根据html5的标准,推荐使用方式二来实现锚点
+    
+    -->
+    <p id="dog_2">第二个小狗</p>
+    <img src="../images/pet_04_dog2.png" alt="第二个小狗">
+
+
+    <br>
+    <!-- 锚点不止可以看当前页面的东西,还可以跳转到其他html中 -->
+    <a href="#">回到顶部</a>
+    <!-- href中什么也不写是进行页面的刷新 -->
+    <a href="">刷新页面</a>
+
+    <a href="javascript:alert(666);">点我弹窗</a>
+</body>
+</html>
