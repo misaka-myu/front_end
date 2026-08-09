@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01交集选择器</title>
+    <style>
+        .rich{
+            color: gold;
+        }
+        .beauty{
+            color: red;
+        }
+        /* p标签且类名为beauty的元素 */
+        p.beauty{
+            color: green;
+        }
+        /* 标签必须放在最前面 */
+        h2.dream{
+            color: brown;
+        }
+        /* .rich.beauty{
+            color: gray;
+        } */
+    </style>
+</head>
+<body>
+    <h2 class="rich">土豪张三</h2>
+    <h2 class="beauty">明星李四</h2>
+    <!-- 此时的颜色是按照style标签中书写的顺序,而不是按照class中类名的先后顺序 -->
+    <h2 class="rich beauty">土豪明星王五</h2>
+    <hr>
+    <p>小狗旺财</p>
+    <p>小猪佩奇</p>
+
+</body>
+</html>

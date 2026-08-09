@@ -5,10 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>样式表的优先级</title>
+
+
+    <link rel="stylesheet" href="./index.css">
+    <style>
+        h1 {
+            color: blue;
+            font-size: 100px;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>hellow</h1>
+    <!-- 行内样式的优先级高于内部样式的优先级 -->
+    <!--  只有同名的内部样式才会被行内样式替换 -->
+    <!-- 行内样式的优先级同样高于外部样式 -->
+    <!-- 内部样式和外部样式的优先级与他们引入的顺序有关后引入的会替换先引入的 -->
+    <!-- 换句话来说内部样式和外部样式的优先级相同 -->
+    <!-- 后来者居上 -->
+    <!-- 如果是内部样式的话同样是后来者居上 -->
+    <h1>欢迎来到尚硅谷学习</h1>
 </body>
 
 </html>

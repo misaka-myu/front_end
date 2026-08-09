@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后代选择器</title>
+    <style>
+        /* 后代选择器使用空格 */
+        .subject li{
+            color: aqua;
+        }
+        ul li {
+            color: red;
+        }
+        ol li{
+            color: green    ;
+        }
+        ul  a{
+            color: yellow
+        }
+        ol  a{
+            color: crimson;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>抽烟</li>
+        <li>喝酒</li>
+        <li>烫头</li>
+        <!-- <div>
+            <li>踢球</li>
+        </div> -->
+        <li>
+            <a href="#">踢球</a>
+        </li>
+    </ul>
+    <hr>
+    <ol>
+        <li>张三</li>
+        <li>李四</li>
+        <li>王五</li>
+        <li>
+            <a href="#">马六</a>
+        </li>
+    </ol>
+    <ol class="subject">
+        <li>java</li>
+        <li>前端</li>
+        <li>大数据</li>
+        <li>linux</li>
+    </ol>
+    <p>
+        <h2></h2>
+    </p>
+</body>
+
+</html>

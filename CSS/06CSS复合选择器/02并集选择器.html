@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02并集选择器</title>
+    <style>
+        .beauty {
+            color: brown;
+        }
+
+        .rich {
+            color: gold;
+            font-size: 40px;
+        }
+
+        .dog {
+            color: green;
+        }
+
+        .pig {
+            color: blue;
+        }
+        /* 并集选择器 */
+        #suxi,
+        .pig,
+        .beauty,
+        .rich,
+        .dog {
+            background-color: gray;
+            font-size: 20px;
+            width: 160px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <h2 class="rich">土豪张三</h2>
+        <h2 class="beauty">明星李四</h2>
+        <!-- 此时的颜色是按照style标签中书写的顺序,而不是按照class中类名的先后顺序 -->
+        <h2>破产王五</h2>
+        <hr>
+        <p class="dog">小狗旺财</p>
+        <p class="pig">小猪佩奇</p>
+        <p id="suxi">小羊苏西</p>
+    </body>
+
+</html>
