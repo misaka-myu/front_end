@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS三大特性</title>
+    <link rel="stylesheet" href="./index.css">
+    <style>
+        h2 {
+            color: yellow;
+        }
+
+        div {
+            /* 可以继承的样式 */
+            color: red;
+            font-size: 40px;
+            /* 不可以继承的样式 */
+            background-color: aqua;
+        }
+
+        p {
+            color: purple;
+        }
+
+        * {
+            color: gray;
+        }
+        /* 并集选择器的权重是分开计算的 */
+        div,
+        p,
+        span {
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 id="atguigu">尚硅谷</h2>
+    <hr>
+    <div>
+        我是div中的文字
+        <span>我是span中的文字1</span>
+        <span>我是span中的文字2</span>
+        <span>我是span中的文字3</span>
+        <p>
+            <span>
+                我是span中的文字4
+            </span>
+        </p>
+    </div>
+</body>
+
+</html>

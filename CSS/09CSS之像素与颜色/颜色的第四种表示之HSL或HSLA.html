@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>颜色的第四种表示之HSL或HSLA</title>
+    <style>
+        /* 其中的色相是用角度表示的
+            数值+deg表示
+            饱和度的取值0%到100%
+            亮度的取值也为0%到100%
+        */
+        /* .atguigu1 {
+            color: hsl(色相, 饱和度, 亮度);
+        } */
+        .atguigu1 {
+            color: hsl(0deg, 100%, 50%);
+        }
+
+        .atguigu2 {
+            color: rgb(255, 0, 0);
+        }
+
+        /* 上述所表示的是一个颜色 */
+        .atguigu2 {
+            color: hsl(60deg, 100%, 50%);
+        }
+
+        /* 使用hsl的时候这里的deg可以省略 */
+        /* 使用hsla就是多了一个透明度的选项 */
+        .atguigu2 {
+            color: hsla(60, 100%, 50%, 0.587);
+        }
+    </style>
+</head>
+
+<body>
+    <h2 class="atguigu1">尚硅谷1</h2>
+    <h2 class="atguigu2">尚硅谷2</h2>
+</body>
+
+</html>

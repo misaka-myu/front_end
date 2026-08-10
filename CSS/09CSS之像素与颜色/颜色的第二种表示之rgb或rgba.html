@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>颜色的第二种表示之rgb或rgba</title>
+    <style>
+        .atguigu1 {
+            color: rgb(255, 0, 0);
+        }
+
+        .atguigu2 {
+            color: rgb(0, 255, 0);
+        }
+
+        .atguigu3 {
+            color: rgb(0, 0, 255);
+        }
+
+        .atguigu4 {
+            color: rgb(138, 43, 226);
+        }
+
+        /* 使用百分比进行书写    */
+        .atguigu5 {
+            color: rgb(100%, 0%, 0%);
+        }
+
+        /* 这里的a是透明度,范围是0~1
+            也可以写百分比
+            也可以省略0
+        */
+        /* .atguigu6 {
+            color: rgba(255, 0, 0, 0.6);
+        }
+
+        .atguigu6 {
+            color: rgba(255, 0, 0, 60%);
+        } */
+
+        .atguigu6 {
+            color: rgba(255, 0, 0,.6);
+        }
+        /* 0,0,0是黑色
+            255,255,255是白色
+            如果rgb中的三个数值相等的话颜色是灰色,并且数值越大颜色越淡
+        */
+        .atguigu7 {
+            color: rgb(0, 0, 0);
+        }
+
+    </style>
+</head>
+
+<body>
+    <h2 class="atguigu1">尚硅谷1</h2>
+    <h2 class="atguigu2">尚硅谷2</h2>
+    <h2 class="atguigu3">尚硅谷3</h2>
+    <h2 class="atguigu4">尚硅谷4</h2>
+    <h2 class="atguigu5">尚硅谷5</h2>
+    <h2 class="atguigu6">尚硅谷6</h2>
+    <h2 class="atguigu7">尚硅谷7</h2>
+</body>
+
+</html>

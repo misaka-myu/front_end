@@ -4,8 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>选择器详细聊</title>
+    <style>
+        /* 写法1 */
+        #test #atguigu{
+            color: yellow;
+        }
+        #agguigu {
+            color: purple;
+        }
+        .container span.slogan{
+            color: red;
+        }
+        div>p>span:nth-child(1){
+            color: green;
+        }
+        /* 优先级最高,行内样式也不行 */
+        .slogan{
+            color: blue !important;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container" id="test">
+        <p>
+            <span class="slogan" id="atguigu">尚硅谷让天下没有难学的技术</span>
+            <span>欢迎同学们来学习!</span>
+        </p>
+    </div>
 </body>
 </html>
