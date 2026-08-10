@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>兄弟选择器</title>
+    <style>
+        /* 找与div标签紧紧相邻的兄弟p标签
+            而且只能向下找
+            相邻兄弟选择器
+        */
+        /* div+p{
+            color: red;
+        } */
+        /* div的所有兄弟p,通用兄弟选择器 */
+        div~p{
+            color: rd;
+        }
+        li+li{
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <!--  -->
+    <div>尚硅谷</div>
+    <p>前端</p>
+    <p>Java</p>
+    <p>大数据</p>
+    <p>UI</p>
+    <ul>
+        <!-- 除了主页之外的标签变为橙色 -->
+        <li>主页</li>
+        <li>秒杀</li>
+        <li>订单</li>
+        <li>我的</li>
+    </ul>
+</body>
+</html> 

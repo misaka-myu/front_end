@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类选择器之结构伪类3</title>
+    <style>
+        /* div>p:nth-child(6){
+            color: red;
+        } */
+        /* nth-last-child倒数第几个孩子 */
+        /* div>p:nth-last-child(3){
+            color: red;
+        } */
+        div>p:nth-last-of-type(2) {
+            color: red;
+        }
+        /* span是其父元素的唯一孩子 */
+        /* span:only-child{
+            color: red;
+        } */
+        /* 选中的是只有一种span类型的元素 */
+        /* span:only-of-type{
+            color: red;
+        } */
+         /* 选中的是html根元素 */
+        /* :root{
+            background-color: antiquewhite;
+        } */
+        /* html{
+            background-color: aqua;
+        } */
+        /* 以上两者等价 */
+        /* 选中的是没有内容的div元素 */
+        div:empty{
+            color: red;
+            width: 40px;
+            height: 20px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div>
+        <span>测试1</span>
+        <p>张三：98分</p>
+        <p>李四：88分</p>
+        <p>王五：78分</p>
+        <p>赵六：68分</p>
+        <p>孙七：58分</p>
+        <p>老八：48分</p>
+        <span>测试2</span>
+    </div> -->
+    <!-- <div>
+        <span>测试1</span>
+    </div>
+    <div>
+        <span>测试2</span>
+        <p>张三：98分</p>
+        <p>李四：88分</p>
+        <p>王五：78分</p>
+        <p>赵六：68分</p>
+        <p>孙七：58分</p>
+        <p>老八：48分</p>
+    </div> -->
+    <!-- 结构三 -->
+    <div></div>
+</body>
+
+</html>

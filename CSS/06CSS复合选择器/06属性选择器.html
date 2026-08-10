@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属性选择器</title>
+    <style>
+        /* 选中具有title属性的元素,不关心title属性的值 */
+        /* [title]{
+            color: red;
+        } */
+        /* 选中具有title属性,且title属性值为atguigu1的元素  */
+        /* [title="atguigu1"]{
+            color: red;
+        } */
+        /* 选中具有title属性的元素,
+            并且title属性必须要以a开头
+         */
+        /* [title^="a"] {
+            color: red;
+        } */
+        /* 选中具有title属性的元素,
+            并且要以3结尾
+        */
+        /* [title$="3"] {
+            color: red;
+        } */
+        /* 选中具有title属性,并且title属性包含u的元素 */
+        [title*="u"] {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div title="atguigu1">尚硅谷1</div>
+    <div title="atguigu2">尚硅谷2</div>
+    <div title="guigu3">尚硅谷3</div>
+    <div title="guigu4">尚硅谷4</div>
+</body>
+
+</html>

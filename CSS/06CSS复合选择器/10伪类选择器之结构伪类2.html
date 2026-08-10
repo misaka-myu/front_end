@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类选择器之结构伪类2</title>
+    <style>
+        /* 选中的是div的第一个儿子p元素 */
+        /* div>p:first-child {
+            color: red;
+        } */
+        /* div的最后一个儿子p元素 */
+        /* div>p:last-child {
+            color: red;
+        } */
+        /* div>p:nth-child(3) {
+            color: red;
+        } */
+        /* 括号中也可以写公式比如说2n,n从0开始，或者是2n+1 也就是说选中所有偶数，选中所有奇数，或者是使用单词odd（奇数），单词even（偶数）*/
+        /* div>p:nth-child(odd) {
+            color: red;
+        } */
+        /* 选中前五个元素 */
+        /* 括号中的形式必须是an+b的形式
+            如果写成b+an的形式是无效的
+        */
+        /* 
+            关于n的值
+            1.0或不写
+            2.n:选中所有子元素，几乎不用
+            3.1~正无穷的整数，选中对应序号的子元素
+            4.2n或者even：选中序号为偶数的子元素
+            5.2n+1或odd：选中序号为奇数的子元素
+            6.-n+3：选中前三个        
+        
+        */
+        /* div>p:nth-child(-n + 5) {
+            color: red;
+        } */
+        /* 按照所有同类型兄弟计算的 */
+        /* div>p:first-of-type {
+            color: red;
+        } */
+         /* 按照所有同类型兄弟计算的第n个p元素 */
+        div>p:nth-of-type(3) {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 结构1 -->
+    <!-- <div>
+        <p>张三：98分</p>
+        <p>李四：88分</p>
+        <p>王五：78分</p>
+        <p>赵六：68分</p>
+        <p>孙七：58分</p>
+        <p>老八：48分</p>
+    </div> -->
+    <!-- 结构2 -->
+    <!-- <div>
+        <p>第一个</p>
+        <p>第二个</p>
+        <p>第三个</p>
+        <p>第四个</p>
+        <p>第五个</p>
+        <p>第六个</p>
+        <p>第七个</p>
+        <p>第八个</p>
+        <p>第九个</p>
+        <p>第十个</p>
+
+    </div> -->
+    <!-- 结构三 -->
+    <div>
+        <span>测试</span>
+        <p>张三：98分</p>
+        <p>李四：88分</p>
+        <p>王五：78分</p>
+        <p>赵六：68分</p>
+        <p>孙七：58分</p>
+        <p>老八：48分</p>
+    </div>
+</body>
+
+</html> 

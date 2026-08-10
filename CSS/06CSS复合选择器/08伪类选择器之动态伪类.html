@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类选择器之动态伪类</title>
+    <style>
+        /* 什么是伪类?--很像类,但不是类,是元素特殊状态的一种描述  */
+        /* 选中的是没有访问过的a元素 */
+        /* 伪类选择器就是用来选中特殊状态的元素 */
+        a:link {
+            color: orange;
+        }
+
+        /* 选中的是访问过的a元素 */
+        a:visited {
+            color: gray;
+        }
+
+        /* 选中的是鼠标悬浮状态的a元素 */
+        a:hover {
+            color: skyblue;
+        }
+
+        /* 选中的是激活状态的a元素 */
+        a:active {
+            color: green;
+        }
+
+        /* 这四种状态是有一定的先后顺序的遵循lvha  */
+        span:hover {
+            color: green;
+
+        }
+
+        span:active {
+            color: red;
+        }
+
+        input:focus,
+        select:focus {
+            color: orange;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://www.baidu.com">去百度</a>
+    <a href="https://www.jd.com">去京东</a>
+    <span>尚硅谷</span>
+    <br>
+    <input type="text">
+    <br>
+    <input type="text">
+    <br>
+    <input type="text">
+    <br>
+    <select>
+        <option value="shanghai">上海</option>
+        <option value="beijing">北京</option>
+    </select>
+</body>
+
+</html>
