@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景相关属性</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            
+            /* 设置背景的颜色
+                就算不设置也有一个默认的背景色，transparent 透明的
+            */
+            font-size: 40px;
+            /* background-color: skyblue; */
+            border: black 5px solid;
+            /* 设置背景图片 */
+            /* background-image: url(../../images/pet_01_dog.png); */
+            /* 设置背景图片的重复方式 */
+            /* no-repeat不重复
+                repeat-x在x轴方向上重复
+                repeat-y在y轴方向上重复
+                默认值是repeat
+            */
+            /* background-repeat: no-repeat; */
+            /* 控制背景图片的位置 */
+            /* 有两种写法
+                1，要么写关键词 left center right
+                2，要么写具体的像素
+            */
+            /* 先是水平方向上，再是垂直方向上 */
+            /* 如果想要在正中间的话可以设置为center，只需要写一个单词就可以 */
+            /* background-position: left bottom ; */
+            /* 控制图片位置的第二种写法 */
+            /* 如果只填写一个值的话，那么另外一个值就是中间 */
+            /* background-position: 100px 200px; */
+            /* 复合属性 */
+            background: blue url(../../images/pet_01_dog.png) no-repeat 300px;
+
+        }
+    </style>
+</head>
+<body>
+    <div>你好呀</div>
+</body>
+</html>

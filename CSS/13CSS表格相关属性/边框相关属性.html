@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>边框相关属性</title>
+    <style>
+        table {
+            /* 不能只指定边框的宽,还需要指定边框的颜色,要不然不显示 */
+            /* border-width: 2px; */
+            /* border-color: black; */
+            /* 实线 */
+            /* border-style: solid; */
+            /* 以上这三者缺一不可,缺一个都不能正常显示 */
+            /* 复合属性 */
+            border: 2px green solid;
+        }
+
+        th,
+        td {
+            border: 2px orange solid;
+
+        }
+
+        h2 {
+            border: 3px red solid;
+        }
+        span {
+            border: 3px yellow dashed;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>边框相关的属性,不仅仅是表格能用,其他元素也能用</h2>
+    <span>你要加油呀</span>
+
+    <table>
+        <caption>
+            人员信息
+        </caption>
+        <thead>
+            <tr>
+                <th>序号</th>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>性别</th>
+                <th>政治面貌</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>张三</td>
+                <td>18</td>
+                <td>男</td>
+                <td>党员</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>李四</td>
+                <td>19</td>
+                <td>女</td>
+                <td>团员</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>王五</td>
+                <td>20</td>
+                <td>男</td>
+                <td>群众</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>赵六/td>
+                <td>21</td>
+                <td>女</td>
+                <td>党员</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
