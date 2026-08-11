@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行高注意事项</title>
+    <style>
+        #d1 {
+            /* 注意点1：行高过小会怎样？---文字重叠，且最小值是0，不能为负数，负数是无效的值 */
+            font-size: 40px;
+            background-color: skyblue;
+            line-height: 60px;
+        }
+
+        #d2 {
+            font-size: 40px;
+            background-color: rgb(255, 204, 0);
+            /* line-height: 60px; */
+            /* 注意点2 行高是可以继承的 */
+            line-height: 1.5;
+        }
+
+        span {
+            font-size: 200px;
+            color: red;
+            /* line-height: 300px; */
+        }
+
+        /* 注意点3 line-height和height的关系 */
+        /* 设置了height，height就是高度的值 */
+        /* 没有设置height，height就是line-height */
+        /* #d3 {
+            font-size: 40px;
+            background-color: yellowgreen;
+            line-height: 100px;
+            height: 300px;
+        } */
+        /* #d3 {
+            font-size: 40px;
+            background-color: yellowgreen;
+            line-height: 100px;
+            height: 40px;
+        } */
+        /* #d3 {
+            font-size: 40px;
+            background-color: yellowgreen;
+            line-height: 100px;
+        } */
+        #d4 {
+            font-size: 40px;
+            background-color: yellowgreen;
+            line-height: 0px;
+        }
+
+        /* 行高的应用场景1，调整多行文字的间距 */
+        #d5 {
+            font-size: 40px;
+            background-color: skyblue;
+            line-height: 100px;
+        }
+
+        /* 行高的应用场景2，单行文字的垂直居中 */
+        #d6 {
+            font-size: 40px;
+            background-color: skyblue;
+            height: 300px;
+            line-height: 300px;
+        }
+        /* 注意，只适合当行文字的垂直居中 */
+    </style>
+</head>
+
+<body>
+    <!-- <div id="d1">atguigu尚硅谷，让天下没有难学的技术atguigu尚硅谷，让天下没有难学的技术atguigu尚硅谷，让天下没有难学的技术atguigu尚硅谷，让天下没有难学的技术atguigu尚硅谷，让天下没有难学的技术atguigu尚硅谷，让天下没有难学的技术</div> -->
+    <!-- <div id="d2">atguigu尚硅谷让天下没有难学的技术atguigu尚硅谷让天下没有难学的技术atguigux<span>x尚硅谷</span>让天下没有难学的技术atguigu尚硅谷让天下没有难学的技术atguigu尚硅谷让天下没有难学的技术atguigu尚硅谷让天下没有难学的技术</div> -->
+    <!-- 默认是基线对其的，然后行高是以一行中最大的行高为准 -->
+    <!-- <div id="d3">atguigu尚硅谷让天下没有难学的技术</div> -->
+    <!-- <div id="d4">atguigu尚硅谷让天下没有难学的技术</div> -->
+    <!-- <div id="d5">atguigu尚硅谷让天下没有难学的技术</div> -->
+    <div id="d6">atguigu尚硅谷让天下没有难学的技术</div>
+</body>
+
+</html>

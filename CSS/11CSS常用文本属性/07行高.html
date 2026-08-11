@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行高</title>
+    <style>
+        #d1 {
+            font-size: 40px;
+            background-color: skyblue;
+            /* 不建议line-height和字体大小一致，因为字体实际大小会比font-size大一些，如果line-height和font-size大小
+                一样的话就会造成字体的重叠
+            */
+            /* 第一种写法，值为像素 */
+            /* line-height: 40px; */
+            /* 第二种写法，值为normal */
+            /* 值为normal的时候，浏览器会自动根据字体的大小进行调整，不会造成重叠 */
+            /* line-height: normal; */
+            /* 第三种写法，值为一个数值 */
+            /* 这里的1表示1 乘以字体大小，一般为字体大小的1.5到2倍 */
+            /* line-height: 1.5; */
+            /* 第四种写法值为百分比 */
+            /* 由于字体设计原因，文字在一行中，并不是绝对垂直居中，若一行中都是文字，不会太影响观感 */
+            line-height: 150%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="d1">atguigu尚硅谷 让天下没有难掉的头发 让天下没有难掉的头发 让天下没有难掉的头发</div>
+</body>
+
+</html>

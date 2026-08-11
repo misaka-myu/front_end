@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本修饰</title>
+    <style>
+        div {
+            font-size: 40px;
+        }
+
+        .atguigu1 {
+            /* 在文字上方显示的线 */
+            /* 这里没有顺序的要求 */
+            /* text-decoration: overline green dotted; */
+            /* text-decoration: green overline dotted; */
+            text-decoration: overline dotted green;
+        }
+
+        .atguigu2 {
+            /* 在文字下方显示的线 */
+            /* text-decoration: underline dotted; */
+            /* text-decoration: underline wavy; */
+            /* 波浪下划线 */
+            text-decoration: underline wavy red;
+            /* 红色下划波浪线 */
+
+        }
+
+        .atguigu3 {
+            /* 穿过文字显示的线 */
+            text-decoration: line-through;
+        }
+
+        .atguigu4,
+        del,
+        ins {
+            /* 不显示线,可以取消a标签默认的下划线 */
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="atguigu1">尚硅谷1</div>
+    <div class="atguigu2">尚硅谷2</div>
+    <div class="atguigu3">尚硅谷3</div>
+    <a class="atguigu4" href="https://www.baidu.com">百度</a>
+    <br>
+    <ins>插入文本</ins>
+    <br>
+    <del>删除的文本</del>
+
+</body>
+
+</html>
