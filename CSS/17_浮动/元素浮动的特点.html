@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素浮动的特点</title>
+    <style>
+        .outer {
+            width: 800px;
+            height: 400px;
+            background-color: gray;
+            padding: 10px;
+        }
+
+        .box1 {
+            padding: 10px;
+            background-color: skyblue;
+        }
+
+        .box2 {
+            padding: 10px;
+            background-color: orange;
+            /* 盒子二开启浮动 */
+            /* 浮动的特点,不论浮动前是什么元素
+                浮动后的宽与高都是被内容所撑开的
+                或者换一句话来说,你的宽与高都尽可能的窄
+                浮动后的元素可以和其他元素共用一行
+            */
+            float: left;
+            /* 浮动后的宽和高还是可以设置的 */
+            /* width: 200px; */
+            /* height: 200px; */
+            /* 浮动后的margin是可以随便设置的 */
+            /* 不会有margin合并,也不会有margin塌陷问题 */
+            /* 能够完美设置margin和padding */
+            /* margin-left: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-right: 20px; */
+            /* 浮动之后的元素不会像行内块那样被当成文本来处理 */
+        }
+
+        .box3 {
+            padding: 10px;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="box box1">盒子1</div>
+        <div class="box box2">盒子2</div>
+        <div class="box box3">盒子3</div>
+    </div>
+</body>
+
+</html>

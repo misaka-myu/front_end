@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin塌陷问题</title>
+    <style>
+        .outer {
+            width: 400px;
+            /* height: 400px; */
+            background-color: gray;
+            /* 解决margin塌陷问题方法1 */
+            /* border: 1px solid red ; */
+            /* 解决margin塌陷问题方法2 */
+            /* padding: 1px; */
+            /* 以上两种问题的缺点是会影响父容器大小 */
+            /* 解决方式三,溢出之后的显示模式 */
+            /* overflow: hidden; */
+
+        }
+        .inner1 {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            /* 下面这行代码是有问题的 */
+            margin-top: 50px;
+            /* margin-bottom: 50px; */
+        }
+        .inner2 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            /* margin-top: 50px; */
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner1">inner1</div>
+        <div class="inner2">inner2</div>
+    </div>
+    <div>我是一段测试的文字</div>
+</body>
+</html>

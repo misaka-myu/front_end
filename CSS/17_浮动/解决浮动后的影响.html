@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>解决浮动后的影响</title>
+    <style>
+        .outer {
+            width: 500px;
+            background-color: gray;
+            border: 1px black solid;
+            /* 第一种解决方案 */
+            height: 122px;
+            /* 第二种解决方案 */
+            /* float: left; */
+            /* 第三种解决方案 */
+            /* overflow: hidden; */
+            /* overflow: scroll; */
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            border: 1px solid black;
+            margin: 10px;
+        }
+
+        .box1,
+        .box2,
+        .box3 {
+            float: left;
+        }
+
+        /* 本身没有浮动,本身得是一个行内块元素或者是一个块元素 */
+        /* display: inline-block   ; */
+
+        .box4 {
+            clear: both;
+        }
+
+        /* 第四种解决方案 */
+
+        .mofa {
+            clear: both;
+        }
+
+        /* 第五种解决方案 */
+        /* .outer::after {
+            content: '';
+            display: block;
+            clear: both;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <!-- <div class="box box0">0</div> -->
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <!-- <div class="box box4">4</div> -->
+        <!-- 补上一个空白的 -->
+        <!-- <div class="mofa"></div> -->
+    </div>
+    <!-- 第一个影响,父元素的高度塌陷 -->
+    <!-- <div style="background-color: orange;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed quod laboriosam
+        dolore cupiditate placeat inventore exercitationem a libero debitis illo ab, quo, unde vel sunt? Sed magni natus
+        nobis omnis quod maxime officia recusandae architecto dignissimos veritatis ab perferendis similique dolor,
+        optio enim eaque ipsum numquam! Ducimus velit possimus, non nihil necessitatibus ullam, soluta a porro
+        architecto dolor, recusandae amet? Quia animi accusantium voluptatum laborum, consequatur sed quos, incidunt
+        excepturi unde quasi reiciendis quo sunt laudantium inventore atque dicta, officia sequi? Placeat sit unde
+        architecto earum voluptatum enim, veniam deserunt nostrum necessitatibus facilis corrupti magnam! Expedita
+        suscipit saepe recusandae quia et. Explicabo laboriosam totam atque expedita consectetur porro sed. In
+        architecto quidem suscipit repellendus repellat? Porro laborum error sit est, eum blanditiis similique dolorum
+        excepturi, ea ut qui at dignissimos expedita sed soluta? Excepturi vitae asperiores eaque possimus animi esse?
+        Vero laboriosam consequuntur, ducimus eaque beatae maiores debitis repellat dolor inventore, dolores sit
+        doloremque assumenda culpa perferendis possimus consectetur natus libero officiis, eius minus. Sit pariatur illo
+        deserunt minima aspernatur expedita, unde magnam porro atque impedit necessitatibus, totam voluptates, nostrum
+        assumenda! Adipisci quidem mollitia harum minima tempora voluptatum iusto odio aliquid quaerat, quisquam autem
+        doloremque. Veritatis doloremque itaque unde laboriosam!</div> -->
+</body>
+
+</html>

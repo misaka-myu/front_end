@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行内块的幽灵空白问题</title>
+    <style>
+        div {
+            width: 600px;
+            background-color: skyblue;
+            /* 第三种解决方案 */
+            font-size: 0;
+        }
+        img {
+            width: 200px;
+            height: 200px;  
+            /* 解决方案配置一个vertical-align
+                如果vertical-align的值为top
+                其他的文字就会被挤到上面,其余的值同理
+            */
+            vertical-align: top;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="../../images/pet_01_dog.png" alt="悟空">
+        <!-- 第二种解决方案,只有图片没有文字的时候才可以使用 -->
+    </div>  
+</body>
+</html>

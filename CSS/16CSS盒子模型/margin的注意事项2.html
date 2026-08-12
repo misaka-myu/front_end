@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin的注意事项2</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+
+        }
+
+        .box1 {
+            background-color: skyblue;
+
+        }
+
+        .box2 {
+            background-color: orange;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .box3 {
+            background-color: green;
+
+        }
+
+        img {
+            width: 100px;
+        }
+
+        .second {
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <hr>
+    <img src="../../images/pet_01_dog.png" alt="小狗"><img class="second" src="../../images/pet_01_dog.png" alt="小狗"><img
+        src="../../images/pet_01_dog.png" alt="小狗">
+    <!-- 上margin与左margin会影响自身的位置,下margin和右margin不会影响自身的位置,会影响兄弟元素之间的位置 -->
+
+</body>
+
+</html>

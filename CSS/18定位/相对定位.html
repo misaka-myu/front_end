@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相对定位</title>
+    <style>
+        .outer {
+            width: 500px;
+            background-color: skyblue;
+            border: 1px solid black;
+            padding: 20px;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            font-size: 20px;
+
+        }
+        .box1 {
+            background-color: #888;
+        }
+        .box2 {
+            background-color: orange;
+            /* 相对定位 */
+            position: relative;
+            /* 相对于自己原来的位置发生定位 */
+            /* left: 100px; */
+            /* 开启相对定位的元素并没有脱离文档流 */
+            /* 这个值可为负值 */
+            /* right: 150px; */
+            /* left和right不可以同时使用,如果同时使用了那么right会失效
+                这个与left和right书写的顺序没有关系,
+                不是先入为主的
+            
+            */
+            /* 谁开了定位,谁的层级就高 */
+            top: 50px;
+            /* margin可以和相对定位同时使用,但是不推荐 */
+            /* 相对定位是可以搭配浮动一起使用的 */
+        }
+        .box3 {
+            background-color: green;
+            top: -50px;
+        }
+        /* 如果两者同时开启了定位,那么后来者压着前者,这时就跟书写顺序有关了 */
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隐藏元素的两种方式</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+        .box1 {
+            background-color: skyblue;
+            /* 第一种方式 */
+            /* display: none; */
+            /* 上面的display这种方式不占位 */
+            /* 下面的visibility这种方式是占位的 */
+            visibility: hidden;
+        }
+        .box2 {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+</body>
+</html>

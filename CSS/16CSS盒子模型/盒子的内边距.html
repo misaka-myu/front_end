@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子的内边距</title>
+    <style>
+        #d1 {
+            width: 400px;
+            height: 400px;
+            background-color: skyblue;
+            font-size: 40px;
+            /* padding: 20px; */
+            /* 可以具体写每个方向上的大小 */
+            /* 左侧的内边距 */
+            /* padding-left: 20px; */
+            /* 上方的内边距 */
+            /* padding-top: 30px; */
+            /* 右侧的内边距 */
+            /* padding-right: 40px; */
+            /* 底部的内边距 */
+            /* padding-bottom: 50px; */
+            /* 复合属性,写一个值,含义是四个方向上的内边距都是一样的 */
+
+            /* padding: 20px; */
+
+            /* 复合属性,写两个值, 上下,左右*/
+            /* padding: 10px 20px; */
+            /* 复合属性,写三个值,含义是上,左右,下 */
+            /* padding: 10px 20px 30px; */
+            /* 复合属性,写四个值,含义是上,右,下,左 */
+            padding: 10px 20px 30px 40px;
+            /* 注意点1:padding的值不能为负数,如果为负数的话相当于是没有设置 */
+
+        }
+
+        span {
+            /* 对于非替换行内元素（Inline Elements，如 <span>、<a>、<strong> 等），padding-top 和
+                padding-bottom 的行为非常特殊：
+                它们会生效并增加元素的背景/内边距区域，但不会挤开上下邻近的元素，也不会改变当前行框（Line Box）的高度。 */
+            background-color: orange;
+            font-size: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        img {
+            width: 200px;
+            padding: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="d1">你好啊</div>
+    <hr>
+    <span>我很好</span>
+    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, fugiat?</div>
+    <img src="../../images/pet_01_dog.png" alt="小狗">
+    <div>哈哈哈哈哈哈哈哈哈</div>
+</body>
+
+</html>

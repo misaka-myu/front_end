@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin合并问题</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+        .box1 {
+            background-color: skyblue;
+            margin-bottom: 50px;
+        }
+        .box2 {
+            background-color: orange;
+            margin-top: 50px;
+            /* 解决方案 */
+            float: left;
+            /* 虽然可以解决上下浮动问题,但是对周围的元素是有影响的 */ 
+        }
+        img {
+            width: 100px;
+        }
+        .test {
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+        }
+        .test1 {
+            background-color: skyblue;
+            margin-right: 50px;
+        }
+        .test2 {
+            background-color: deepskyblue;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="test test1" >a</div><div class="test test2">b</div>
+</body>
+</html>

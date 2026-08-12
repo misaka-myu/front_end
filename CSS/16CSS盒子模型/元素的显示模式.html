@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!-- 块元素
+    1.主体结构标签:<html>,<body>
+    2.排版标签: <h1>~<h6> ,<hr>, <p>,<pre>,<div>
+    3.列表标签: <ul>,<ol>,<li>,<dl>,<dt>,<dd>
+    4.表格相关标签: <table> <tbody> <thead> <tfood> <tr> <caption>
+    5.<form>与<option>
+-->
+<!--  行内元素(inline)
+        1.文本标签:<br>,<em>,<strong>,<i>,<sup>,<sub>,<del>,<ins>
+        2.<a>与<label>
+
+-->
+<!-- 行内块元素
+    1.图片:<img>
+    2.单元格<td>,<th>
+    3.表单控件:<input>,<textarea>,<select>,<button>
+    4.框架标签: <iframe>
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素的显示模式</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+        }
+
+        body {
+            /* margin: 0; */
+            background-color: gray;
+        }
+
+        #d1 {
+            background-color: skyblue;
+        }
+
+        #d2 {
+            background-color: orange;
+        }
+
+        #d3 {
+            background-color: green;
+        }
+
+        .one {
+            background-color: skyblue;
+            /* 行内元素无法通过CSS设置宽高 */
+            /* width: 400px;
+            height: 400px; */
+        }
+
+        .two {
+            background-color: yellow;
+            /* 行内元素无法通过CSS设置宽高 */
+            /* width: 400px;
+            height: 400px; */
+        }
+        img {
+            /* 宽度和高度可以只设置一个,另一个会等比缩放 */
+            width: 50px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        1.在页面中独占一行,不会与任何元素公用一行,是从上到下排列的,
+        2.默认宽度:撑满父元素 (那我们的这个程序来举例子,我们的这个div元素的父元素是body)
+        3.默认高度:由内容撑开
+        4.可以通过CSS设置宽高
+    -->
+    <div id="d1">山回路转不见君</div>
+    <div id="d2">雪上空留马行处</div>
+    <div id="d3">风里雨里我在尚硅谷等你</div>
+    <hr>
+    <!-- 行内元素无法通过CSS设置宽高,行内元素的宽高是由其内容决定的 -->
+    <!-- 
+        1.在页面中不独占一行,一行中不能容纳下的行内元素,会在下一行继续从左到右排列
+        2.默认宽度:由内容撑开
+        3.默认高度:由内容撑开
+        4.可以通过CSS设置宽高
+    
+    -->
+    <span class="one">人之初</span>
+    <span class="two">性本善</span>
+    <span class="one">人之初</span>
+    <span class="two">性本善</span>
+    <span class="one">人之初</span>
+    <span class="two">性本善</span>
+    <span class="one">人之初</span>
+    <span class="two">性本善</span>
+    <span class="one">人之初</span>
+    <span class="two">性本善</span>
+    <span class="one">人之初</span>
+    <span class="two">性本善</span>
+    <span class="one">人之初</span>
+    <span class="two">性本善</span>
+    <span class="one">人之初</span>
+    <span class="two">性本善</span>
+    <span class="one">人之初</span>
+    <span class="two">性本善</span>
+    <span class="one">人之初</span>
+    <span class="two">性本善</span>
+    <span class="one">人之初</span>
+    <span class="two">性本善</span>
+    <span class="one">人之初</span>
+    <span class="two">性本善</span>
+    <span class="one">人之初</span>
+    <span class="two">性本善</span>
+    <span class="one">人之初</span>
+    <span class="two">性本善</span>
+    <span class="one">人之初</span>
+    <span class="two">性本善</span>
+    <span class="one">人之初</span>
+    <span class="two">性本善</span>
+    <span class="one">人之初</span>
+    <span class="two">性本善</span>
+    <span class="one">人之初</span>
+    <span class="two">性本善</span>
+    <hr>
+    <!-- 行内块元素
+        行内块元素又称内联块元素
+        特点:
+        1.在页面中不独占一行
+        2.默认宽度:由内容撑开f
+        3.默认高度:由内容撑开
+        4.可以通过CSS设置宽高
+    -->
+    <img src="../../images/pet_01_dog.png" alt="小狗">
+    <img src="../../images/pet_01_dog.png" alt="小狗">
+    <img src="../../images/pet_01_dog.png" alt="小狗">
+    <!-- 
+        元素早期只氛围:行内元素,块级元素,区分条件也只有一条:"是否独占一行",如果按照这种
+        分类方式,行内块元素应该算作行内元素.
+    
+    --> 
+</body>
+
+</html>
