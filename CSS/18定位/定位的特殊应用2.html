@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!-- 用定位实现块元素中的块元素水平居中 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位的特殊应用2</title>
+    <style>
+        .outer {
+            width: 800px;
+            height: 400px;
+            background-color: #888;
+            /* overflow: hidden; */
+            position: relative;
+        }
+
+        .inner {
+            width: 400px;
+            height: 100px;
+            background-color: orange;
+            font-size: 20px;
+            /* 水平方向上居中 */
+            /* margin: 0 auto;
+            margin-top: 150px;
+            text-align: center;
+            line-height: 100px; */
+            position: absolute;
+            /* 方法二 */
+            /* left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto; */
+            left: 50%;
+            top: 50%;
+            margin-left: -200px;
+            margin-top: -50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="inner">你好啊</div>
+    </div>
+</body>
+
+</html>

@@ -11,6 +11,15 @@
             background-color: skyblue;
             border: 1px solid black;
             padding: 20px;
+            position: relative;
+            /* 何为包含块
+                没有脱离文档流的元素,父元素就是包含块
+                脱离文档流的元素,第一个开启定位的祖先元素就是他的包含块
+            */
+
+        }
+        .outer:hover .box2 {
+            left: 220px;
         }
 
         .box {
@@ -27,12 +36,42 @@
         .box2 {
             background-color: orange;
             position: absolute;
+            top: 220px;
+            left: 20px;
+            /* top: 0;
+            left: 0; */
+            /* 如果左和右同时写右失效 */
+            /* left: 100px;
+            right: 100px; */
+            /* left right top bottom的值可以是负值 */
+            /* 如果同时写上下的话,听top的 */
+            /* margin-left: 50px;
+            margin-top: 50px; */
+            /* 这个绝对定位是可以和margin一起使用的 */
+            /* 注意点:需要上面写对应的位置之后与之对应的left和right才可以使用 */
+            /* 不推荐使用这种方式,在某些浏览器中可能不好用 */
+            /* float: right; */
+            /* 绝对定位的元素不可以开启浮动
+                开启浮动之后是没有效果的
+                一定是听绝对定位的
+            */
+            /* 定位之前不管是什么元素
+                块元素,行内元素,行内块元素,定位之后都变成了定位元素,定位元素是一种特殊的
+                元素
+                定位元素的特点：
+                定位元素的宽和高是默认被内容撑开的
+                宽高是可以调整的
+            */
+            /* 绝对定位的应用场景
+                一个元素盖到另一个元素的身上
 
+            */
+            transition: 1s all linear;
         }
 
         .box3 {
             background-color: green;
-            top: -50px;
+            /* top: -50px; */
         }
 
         /* 如果两者同时开启了定位,那么后来者压着前者,这时就跟书写顺序有关了 */
