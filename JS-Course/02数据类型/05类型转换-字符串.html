@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>类型转换</title>
+    <script>
+        /* 
+            类型转换是指讲一种类型转换为其他类型
+            主要是指将其他类型转换为(字符串,数值,布尔值)
+            转换为字符串
+            方式1
+            调用toString方法
+            null和undefined没有toString方法
+            所以对这两个东西调用toString()时会报错
+            调用String()函数将其他类型转换为字符串
+            String()函数可以将null和undefined转换为字符串
+            基本原理，String函数对于有toString方法的类型直接调用其toString方法，对于没有toString方法的，如果是null的话就直接转换为"null",
+            如果是undefined的话就是直接"undefined"
+        */
+        let a = 10
+        console.log(typeof a, a);
+        
+        a = a.toString()
+        console.log(typeof a,a);
+        let b = 33
+        b = String(b)
+        console.log(typeof b ,b);
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
