@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高阶函数</title>
+    <script>
+        /* 
+            希望在someFn()函数执行时,可以记录一条日志
+            在不修改原函数的基础上,为其增加记录日志的功能
+            可以通过高阶函数动态的生成一个新的函数
+        */
+        function someFn() {
+            return 'hello'
+        }
+        function outer(cb) {
+            return () => {
+                const result = cb()
+                return result
+            }
+        }
+        let result = outer(someFn)
+        console.log(result);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

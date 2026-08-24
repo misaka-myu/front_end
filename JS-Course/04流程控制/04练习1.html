@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>练习1</title>
+    <script>
+        let num = +prompt('请输入一个整数')
+        // 验证一下用户的输入是否合法,只有是有效数字的时候,我们才检查它是否为偶数
+        // 不能使用相等或者全等来检查一个函数是否是NaN
+        // 可以使用isNaN()函数来检查一个值是否为NaN
+        // num % 1 !== 0    
+        if (isNaN(num) || num % 1 !== 0) {
+            alert('你的输入有问题,请输入一个整数')
+        } else {
+            if (num % 2 == 0) {
+                alert(`${num}为偶数`)
+            } else {
+                alert(`${num}输入的数为奇数`)
+            }
+        }
+
+        /*
+            编写一个程序,获取用户输入的整数,然后通过程序显示这个数是奇数还是偶数
+        */
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

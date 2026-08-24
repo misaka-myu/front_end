@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this</title>
+    <script>
+        /* 
+            函数在执行时,js解释器每次都会传一个隐含的参数
+            这个参数就叫做this
+            this会指向一个对象,this所指向的对象会根据函数调用方式的不同而不同
+                1.以函数形式调用时,this指向的是window
+                2.以方法的形式调用时,this指向的是调用方法的对象
+                以上两种实际上是一种
+        
+        */
+        function fn() {
+            console.log(this === window);
+            console.log('this打印',this)
+        }
+        const obj = { name: '孙悟空' }
+        obj.test = fn
+        obj.test()
+        const fn2 = (a,b) => a + b
+        console.log(fn2(1,2));
+        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

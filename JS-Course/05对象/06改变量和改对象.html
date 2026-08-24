@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>改变量和改对象</title>
+    <script>
+        /* 
+            如果有其他变量指向该对象,则所有指向该对象的变量都会收到影响
+            修改变量时,只会影响当前的变量
+            在使用变量存储对象时候,很容易改变变量指向的对象,提高代码的复杂度
+            所以通常情况下,声明存储变量的对象会使用const
+            const只是禁止变量被重新赋值,对对象的修改没有任何影响
+            const声明的变量只能声明一次
+        
+        */
+        let obj = {}
+        obj.name = '猪八戒'//修改对象
+        obj = null//修改变量
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数</title>
+    <script>
+        function sort(array) {
+            const arr = [...array]
+            for (let i = 0; i < arr.length - 1; i++) {
+                let minIndex = i; // 记录当前未排序区间的最小值索引
+                for (let j = i + 1; j < arr.length; j++) {
+                    if (arr[j] < arr[minIndex]) {
+                        minIndex = j;
+                    }
+                }
+                // 找到最小值后，仅在必要时交换一次
+                if (minIndex !== i) {
+                    let temp = arr[i];
+                    arr[i] = arr[minIndex];
+                    arr[minIndex] = temp;
+                }
+                
+            }
+            return arr
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

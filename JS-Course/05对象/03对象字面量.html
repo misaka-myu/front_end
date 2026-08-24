@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象字面量</title>
+    <script>
+        let obj = Object();
+        let obj2 = {age:18,gender:'男'}
+        /* 
+            枚举对象中的属性
+            对象字面量,可以直接使用{}来创建对象
+            使用{}创建的对象,可以直接向对象中添加属性
+            语法:
+            {
+                属性名:属性值,
+                属性名:属性值,
+                属性名:属性值,
+                [属性名]:属性值
+            }
+            其中也是可以嵌套对象的
+            注意:并不是所有属性都可以枚举,比如使用符号添加的属性
+        */
+       obj2.name = '孙悟空'
+
+        console.log(typeof obj);
+        console.log(typeof obj2);
+        for(let propName in obj2){
+            console.log(propName,obj2[propName]);
+            
+        }
+        
+        
+    </script>
+</head>
+<body>
+</body>
+</html>

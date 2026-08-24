@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>构造函数</title>
+    <script>
+        /* 
+            当我们在类中直接指定实例属性的值时,意味着我们创建的所有对象的属性都是这个值
+        
+        */
+        class Person {
+            name = '孙悟空'
+            age = 18
+            gender = '男'
+            sayHello(){
+                console.log('hello -> ',this);
+            }
+            // 在类中可以添加一个特殊的方法,该方法称为构造方法(构造函数)
+            constructor(age,name,gender){
+                console.log('构造函数执行了');
+                // 可以在构造函数中为实例属性赋值
+                // 在构造函数中,this表示当前所创建的对象
+                this.name = name
+                this.age = age
+                this.gender = gender 
+            }//构造函数时,会在我们调用类创建对象时执行
+        }
+
+        const p1 = new Person()
+        const p2 = new Person()
+        const p3 = new Person()
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

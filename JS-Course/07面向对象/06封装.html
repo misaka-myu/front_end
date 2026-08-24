@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>封装</title>
+    <script>
+        /* 
+            面向对象的三个特点
+                封装,继承,多态
+            1.封装
+            对象就是用来存储不同属性的容器
+            直接添加到对象中的属性并不安全,因为它们可以被任意的修改,
+            如何确保数据的安全
+                1.私有化数据,使用#开头
+                2.私有属性只能在类内部访问
+                3.私有化的属性必须先声明,然后才能访问
+                4.提供setter和getter方法来开放我们对数据的操作
+                    =属性设置私有,通过getter和setter方法操作属性带来的好处
+                        1.可以控制属性的读写权限
+                        2.可以在方法中对属性的值进行验证
+                -封装主要用来保障数据的安全
+                -实现封装的方式 
+                    1.属性私有化加#
+                    2.通过getter和setter方法来操作属性
+                        get 属性名(){
+                            return  this.#属性
+                        }
+                        set 属性名(参数){
+                            验证逻辑
+                            this.#属性 = 参数
+                        }
+
+        */
+        class Person {
+            #address  //实例使用#开头就变成了私有属性
+            #name
+            constructor(name, age, gender, address) {
+                this.#name = name
+                this.age = age
+                this.gender = gender
+                this.#address = address
+            }
+            sayHello() {
+                console.log(this.name);
+
+            }
+            // getter方法,用来读取属性
+            getAddr() {
+                return this.#address
+            }
+            // setter方法,用来设置属性
+            setAddr() {
+                return this.#address
+            }
+            get name() {
+                return this.#name
+            }
+        }
+        const p1 = new Person('孙悟空', 18, '男')
+        console.log(p1.name);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>递归</title>
+    <script>
+        /* 
+                调用自身的函数称为递归函数
+                递归的作用和循环基本上是一致的
+                编写递归一定要有两个要点
+                1.基线条件 --递归的终止条件
+                2.递归条件
+                递归的作用和循环是一致的,不同点在于,递归的思路比较清晰整洁,循环的执行性能较好
+                    在开发中一般的问题都可以通过递归来解决,也是尽量去使用循环,少用递归
+                    只在使用循环解决比较麻烦的情况下实用递归
+        */
+        function fn() {
+            fn()
+        }
+        fn()
+        function fn2(num){
+            if(num === 1){
+                return 1
+            }
+            else {
+                return fn(num - 1) * num
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

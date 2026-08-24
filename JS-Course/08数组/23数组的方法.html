@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组的方法</title>
+    <script>
+        let arr = ['a', 'e', 'g', 'd', 'f']
+        /* 
+            sort()方法
+                -sort用来对数组进行排序(会改变原数组)
+                破坏性的方法
+                -sort默认会对数组进行升序排序
+                    注意:sort默认会按照unicode编码进行排序,所以如果直接通过sort对数字进行排序
+                        可能会得到一个不正确的结果
+                -参数:
+                    -可以传递一个回调函数作为参数,通过回调函数来指定排序规则
+                    如果传的是(a,b) => a - b //升序排列
+                    如果传的是(a,b) => b - a //降序排列
+                forEach()
+                    -用来遍历数组
+                    -需要一个回调函数作为参数,这个回调函数会被调用多次
+                    数组中有几个元素回调函数就会调用多少次
+                    每次调用,都会将数组中的数据作为参数传递
+                    -回调函数中有三个参数:
+                        element 当前的元素
+                        index 当前元素的索引
+                        array 被遍历的数组
+                filter()
+                    -用来过滤数组中的元素
+                    -将数组中符合条件的元素保存到一个新数组中返回
+                    -非破坏行方法,不会影响原数组,会返回一个新的数组
+                    
+
+        
+        */
+        arr = [2, 5, 1, 5, 2, 3, 5, 7, 8, 5, 3, 10, 42, 13]
+        arr.sort((a, b) => a - b) //升序排序
+        arr.sort((a, b) => b - a) //降序排序
+        // arr = ['孙悟空', '猪八戒', '唐僧']
+        arr.forEach(() => {
+            console.log(123);
+            
+        })
+        // arr.forEach((element,index,array) => {
+
+        // })
+        console.log(arr);
+        
+        let result  = arr.filter(ele => ele % 2 === 0)
+        console.log(result);
+        
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

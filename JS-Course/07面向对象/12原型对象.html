@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原型对象</title>
+    <script>
+        /* 
+            所有的原型对象他们的原型对象都是同一个
+                也就意味着,同类型对象的原型链是一样的
+            原型的作用:
+                原型就相当于是一个公共的区域,可以被所有该类实例访问,
+                    可以将一个该类中,所有的公共属性(方法)统一存储到原型中
+                    这样我们只需要创建一个属性,既可被所有实例访问
+            在对象中有些值是对象独有的,像属性(age,gender,name),每个对象都应该有自己的值
+                但是有些值对于每个对象来说都是一样的,像各种方法,对于这些一样的值没必要重复的创建
+            js中继承就是通过原型来实现的
+                当继承时,子类的原型就是一个父类的实例
+        
+        */
+       class Person {
+            constructor(name,age){
+                this.name = name
+                this.age = age
+            }
+            sayHello(){
+                console.log('hahah');
+                
+            }
+       }
+       const p1 = new Person()
+       const p2 = new Person()
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
