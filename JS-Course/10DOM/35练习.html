@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>练习</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .img-list li{
+            position: absolute;
+            opacity: 0;
+            transition: opacity .3s;
+        }
+        .img-list a img{
+            width: 390px;
+            height: 400px;
+            vertical-align: top;
+        }
+        .outer {
+            width: 390px;
+            height: 400px;
+            margin: 100px auto;
+        }
+        .current {
+            z-index: 1;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <ul class="img-list">
+            <li class="current">
+                <a href="#">
+                    <img src="./img/1.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./img/2.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./img/3.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./img/4.jpg" alt="">
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <script>
+        /* 
+            自动切换图片
+        
+        */
+       setTimeout(function auto() {
+            //获取当前显示的图片
+            const current = document.querySelector(".img-list .current");
+            // 获取下一个图片
+            const next = current.nextElementSibling  || document.getElementsByTagName("li")[0];
+            // 切换显示状态
+            current.classList.remove("current");
+            next.classList.add("current");
+            setTimeout(auto,3000);
+       },3000);
+    </script>
+</body>
+</html>

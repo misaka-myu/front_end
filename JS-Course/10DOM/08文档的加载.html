@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文档的加载</title>
+    <script src="./script/script.js" defer></script>
+</head>
+<body>
+    <button id="btn">点我一下</button>
+    <script>
+        /* 
+            网页是自上向下加载的,如果我们将js代码编写到网页的上边
+                js代码在执行时,网页还没有加载完毕,这时会出现无法获取到DOM的情况
+                如果解决这个问题:
+                    1.将script标签编写到body的最后
+                    window.onload 事件会在窗口中的内容加载完毕之后才触发
+                    2.将代码编写到window.onload的回调函数中
+                    3.将代码编写到document对象的DOMContentLoaded的回调函数中
+                    document的DOMContentedLoaded事件会在当前文档加载完毕后触发(执行时机更早)
+                    4.将代码编写到外部的js文件中,然后以defer的形式进行引入(执行时机更早,早于DOMContentedLoaded)
+
+        
+        
+        */
+        const btn = document.getElementById("btn")
+        console.log(btn);
+        // window.onload = function (){
+
+        // }
+        // window.addEventListener("load",function(){
+              
+        // })
+        document.addEventListener("DOMContentLoaded",function(){
+
+        })
+    </script>
+</body>
+</html>

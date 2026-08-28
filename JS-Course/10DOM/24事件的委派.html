@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件的委派</title>
+</head>
+
+<body>
+    <button id="btn">点我一下</button>
+    <hr>
+    <ul id="list">
+        <li><a href="javascript:;">链接一</a></li>
+        <li><a href="javascript:;">链接二</a></li>
+        <li><a href="javascript:;">链接三</a></li>
+        <li><a href="javascript:;">链接四</a></li>
+    </ul>
+    <script>
+        /* 
+            希望：
+                只绑定一次事件，就可以让所有的超链接，包括当前的和未来新建的超链接都具有这些事件
+            思路：
+                可以将事件统一绑定给document,这样点击超链接时，由于事件的冒泡，
+                    会导致document上的点击事件被触发,这样只需要绑定一次,所有的超链接都会具有这些事件
+            委派就是将本该绑定给多个元素的事件,统一绑定给document,这样可以降低代码的复杂度,方便维护
+
+        */
+
+        const btn = document.getElementById("btn");
+        const list = document.getElementById("list");
+        // 获取links中所有的超链接
+        const links = document.getElementsByTagName("a")
+        document.addEventListener("click", (event) => {
+            /* 
+                在执行函数之前先来判断一下,事件是由谁触发
+            
+            */
+            console.log(Array.from(links));
+            console.log([...links]);
+            console.log(event.target);
+            
+            if ([...links].includes(event.target)) {
+                alert(event.target.textContent);
+
+            }
+
+
+        })
+        // for (let i = 0; i < links.length; i++) {
+        //     links[i].addEventListener("click", event => {
+        //         alert(event.target.textContent);
+        //     })
+        // }
+        /* 
+            点击按钮后，在ul中添加一个新的li 
+        */
+        btn.addEventListener("click", () => {
+            list.insertAdjacentHTML("beforeend", '<li><a href="javascript:;">新链接</a></li>');
+        })
+    </script>
+</body>
+
+</html>

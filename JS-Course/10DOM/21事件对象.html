@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件对象</title>
+    <style>
+        #box1 {
+            width: 300px;
+            height: 300px;
+            background-color: yellowgreen;
+        }
+        #box2{
+            width: 250px;
+            height: 250px;
+            background-color: #ff0;
+        
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">
+        <div id="box2">
+
+        </div>
+    </div>
+    <a href="https://www.baidu.com" id="baidu">去百度</a>
+
+
+    <script>
+        /* 
+            在DOM中存在着多种不同类型的事件对象
+                属性:
+                    -event.target //触发事件的对象
+                    -event.currentTarget 绑定事件的对象(同 this)
+                    -event.stopPropagation() //停止事件的传导
+                    -event.preventDefault() 取消默认行为 推荐使用这种方式
+                -多种事件对象有一个共同的祖先Event
+                -事件的冒泡就是事件的向上传导
+                -当元素上的某个事件被触发后,其祖先元素上的相同事件也会同时被触发
+                -冒泡的存在大大简化了代码的编写,但是在一些场景下我们并不希望冒泡存在
+                    不希望事件冒泡时,可以通过事件对象来取消冒泡
+        
+        */
+        const box1 = document.getElementById("box1");
+        const box2 = document.getElementById("box2");
+        const baidu = document.getElementById("baidu");
+        baidu.addEventListener("click",event => {
+            event.preventDefault() //取消默认行为
+            alert("被点了"); 
+            return false;  //这里返回false无法取消默认行为
+        })
+        box1.addEventListener("click",event => {
+                /* 
+                    在事件的响应函数中:
+                        event.target表示的是触发事件对象
+                        this 指的是绑定事件的对象
+                */
+               console.log(event.target);
+               console.log(this);
+               alert("hello,我是box1");
+               
+        })
+        box2.addEventListener("click",function(event){
+                alert("我是box2");
+                event.stopPropagation() //取消事件的传导
+        })
+    </script>
+</body>
+</html>

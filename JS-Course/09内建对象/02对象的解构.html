@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象的结构</title>
+    <script>
+        const obj = {name:'孙悟空',age:18,gender:'男'}
+        let {name,age ,gender} = obj; //声明变量同时解构对象
+        console.log(name,age,gender);
+        //一下是复杂写法
+        name = obj.name;
+        age = obj.age;
+        gender = obj.gender;
+        let {address} = obj //没有的属性返回undefined
+        console.log(address);
+        let {name:a,age:b,gender:c,add = '花果山'} = obj
+        // 可以既起别名又起默认值
+        // 可以通过:来起别名
+        console.log(a,b,c)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

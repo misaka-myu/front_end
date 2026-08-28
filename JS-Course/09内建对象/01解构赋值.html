@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>解构赋值</title>
+    <script>
+        /* 
+            解构赋值
+        */
+        const arr = ['孙悟空', '猪八戒', '沙和尚'];
+        let a, b, c, d;
+        [a, b, c, d = 10] = arr; //解构赋值,给d设置默认值,如果数组中有则赋值,没有则使用默认值
+        [a, b, c, d = d] = arr; //解构赋值,给d设置默认值,如果数组中有则赋值,没有则使用原来的值
+        let [e, f] = arr; //声明同时解构
+        console.log(d, e, f);
+        // 解构数组时,可以使用...,来设置多余的元素
+        // 可以通过解构赋值来快速交换两个变量的值
+        let a1 = 10;
+        let a2 = 20;
+        console.log(a1, a2);
+        [a1, a2] = [a2, a1]
+        /*
+            数组中可以存储任意类型的值,也可以存数组
+            如果一个数组中的元素还是数组,则这个数组我们就称为二维数组
+        */
+        //    遍历二维数组
+        arr2 = [[1,2,3],[4,5,6]]
+        for(let stu of arr2){
+            for(let v of stu){
+                console.log(v);
+                
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

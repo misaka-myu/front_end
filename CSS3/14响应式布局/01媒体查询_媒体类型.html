@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>媒体查询_媒体类型</title>
+    <style>
+        h1 {
+            width: 600px;
+            height: 400px;
+            
+        }
+        /* 只有在打印机或者打印预览才应用的样式 */
+        /* 这个媒体查询并没有提高谁的优先顺序,在书写的时候我们应该先写正常的样式,然后再写媒体查询 */
+        @media print {
+            h1 {
+                background: transparent;
+            }
+        } 
+        /* 只有在屏幕上才应用的样式 */
+        @media screen {
+            h1 {
+                font-family: "翩翩体-简";
+            }
+        }
+        @media all {
+            h1 {
+                color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>新年快乐</h1>
+</body>
+</html>

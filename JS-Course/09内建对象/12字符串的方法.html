@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串的方法</title>
+    <script>
+        /* 
+                -字符串本质就是一个字符数组
+                -"hello"  --> ['h','e','l','l','o'] 
+                属性和方法:
+                    length 获取字符串的长度,字符串的长度无法修改
+                    字符串[索引] 获取指定位置的字符
+                    字符串中的属性和方法都不是破坏性的
+                    str.at() 
+                        -根据索引获取字符,可以接受负索引
+                    str.charAt()
+                        -根据索引获取字符
+                    str.concat()
+                        -用来连接两个或多个字符串
+                    str.includes()
+                        -用来检查字符串中是否包含某个内容
+                            有返回true
+                            没有返回false
+                            -参数
+                                第一个参数表示要查询的字符串,第二个参数表示查询的起始位置
+                    str.indexOf()
+                    str.lastIndexOf()
+                        -查询字符串中是否包含某个内容
+                        -返回值是下标索引
+                    str.endsWith()
+                        -检查该字符串是否以指定位置结束
+                    str.startsWith()
+                        -检查一个字符串是否以指定内容开头
+                    str.padStart()
+                    str.padEnd() 
+                         -通过添加指定的内容,使字符串保持某个长度
+                         -第一个参数是这个具体要指定的长度,第二个参数是长度不够的时候补充的字符,默认的字符是空格
+                    str.repeat()
+                        -作用:将str这个字符串重复n此
+                        -参数:第一个参数为要设置的重复的次数
+                    str.replace()
+                        -作用将指定的字符串替换成对应的串,只会替换一个
+                        -参数1,要替换的串,参数2,替换后的串
+                    str.replaceALL()
+                        -与上述的区别是替换所有,不是替换一个了
+                    str.slice() 
+                        -对字符串进行切片
+                        -参数1:起始位置索引,包括起始位置
+                        -参数2:结束位置索引,包括结束位置
+                    str.subString()
+                        -所做的事情和上面的相同
+                    str.split()
+                        -用来将一个字符串拆分为一个数组
+                    str.toLowerCase()
+                        -把字符串都转换为小写
+                    str.toUpperCase()
+                        -把字符串都转换为大写
+                    str.trim()
+                        -去除一个字符串的前后所有空格
+                    str.trimStart()
+                        -去除一个字符串的开始空格
+                    str.trimEnd()
+                        -去除一个字符串的结束空格
+        */
+        let str = "hello"
+        console.log(str.length);
+        // 遍历字符串
+        for (let v of str) {
+            console.log(v);
+
+        }
+        str.at(0)
+        str.at(-1)
+        str = "hello"
+        console.log(str.includes("tom"));
+        result = str.slice()
+        let str2 = "abc@bsc@afjk@jla" //拆谁谁就消失
+        str2.split("@")
+        // join是将数组连接起来,里面传入的参数用什么来进行连接,默认是逗号(,)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

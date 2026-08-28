@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伸缩项目——伸</title>
+    <style>
+        .outer {
+            width: 1000px;
+            height: 900px;
+            background-color: #888;
+            /* 将该容器变成了伸缩容器(开启了flex布局) */
+            display: flex;
+            margin: 0 auto;
+            /* 伸缩盒相关属性start */
+            /* 调整主轴的方向 水平从左到右,默认值*/
+            flex-direction: row;
+            /* 调整主轴的方向,水平从右到左 */
+            /* flex-direction: row-reverse; */
+            /* 调整主轴方向,垂直从上到下 */
+            /* flex-direction: column; */
+            /* 调整主轴方向,垂直从下到上 */
+            /* flex-direction: column-reverse; */
+            /* 主轴换行方式 */
+            flex-wrap: wrap;
+            /* 主轴的对齐方式,起始位置 默认值*/
+            justify-content: flex-start;
+            
+            
+            
+
+        }
+
+        .inner {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            background-color: skyblue;
+            box-sizing: border-box;
+            flex-grow: 1;
+        }
+        .inner2 {
+            /* 设置伸缩项目在主轴方向上的伸缩长度,若主轴是横向的则宽失效,若主轴是纵向的则高失效 */
+            /* 这个的默认值是auto,也就是说如果不写的话会自动的去找默认的宽和高*/
+            /* flex-basis: auto; */
+
+            /* flex-basis: 300px; */
+            width: 300px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="inner">1</div>
+        <div class="inner">2</div>
+        <div class="inner">3</div>
+
+    </div>
+</body>
+
+</html>

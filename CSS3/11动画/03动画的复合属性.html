@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画的复合属性</title>
+    <style>
+        .outer {
+            width: 1000px;
+            height: 100px;
+            border: 1px black solid;
+        }
+
+        .inner {
+            width: 100px;
+            height: 100px;
+            background-color: deepskyblue;
+            animation: anime 1s 0.5s linear infinite alternate-reverse ;
+
+
+        }
+
+        .outer:hover .inner {
+            /* 这里暂停一般不使用复合属性,如果使用复合属性的话会对上面写的复合属性造成影响 */
+            /* animation: paused; */
+            /* 而是使用这个专门的属性 */
+            animation-play-state: paused;
+        }
+
+        /* 定义一组关键帧 */
+        @keyframes anime {
+
+            /* 第一帧 */
+            from {}
+
+            /* 最后一帧 */
+            to {
+                transform: translate(900px);
+                border-radius: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改css样式</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: #bfa !important; 
+            /* 获得最高的优先级,优先级超过内联样式 */
+            
+        }
+    </style>
+</head>
+
+<body>
+    
+    <button id="btn">点我一下</button>
+    <hr>
+    <div class="box1"></div>
+    <script>
+        /* 
+            点击按钮后修改box1的宽度
+        
+        */
+        //    获取按钮
+        const btn = document.getElementById("btn");
+        const box1 = document.querySelector(".box1");
+        btn.onclick = function () {
+            //修改box1的样式
+            // 修改样式的方式: 元素.style.样式名 = 样式值 
+            // 如果样式名中含有-,则需要将样式表修改为驼峰命名法
+            box1.style.width = "600px";
+            box1.style.backgroundColor = "green";
+        }
+    </script>
+</body>
+
+</html>

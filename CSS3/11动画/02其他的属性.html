@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>其他的属性</title>
+    <style>
+        .outer {
+            width: 1000px;
+            height: 100px;
+            border: 1px black solid;
+        }
+
+        .inner {
+            width: 100px;
+            height: 100px;
+            background-color: deepskyblue;
+            animation-name: anime;
+            /* 应用动画到元素 */
+            /* 动画的持续时间 */
+            animation-duration: 3s;
+            /* 动画的延迟时间 */
+            animation-delay: 0.5s;
+            /* *****其他属性******* */
+            /* 设置动画的方式 */
+            /* animation-timing-function: steps(20); */
+            animation-timing-function: linear;
+            /* 动画播放的次数 */
+            animation-iteration-count: infinite;
+            /* 上面的是无限循环 */
+            /* 动画的方向 */
+            /* 默认只是normal */
+            /* animation-direction: normal; */
+            /* 反转 */
+            /* animation-direction: reverse; */
+            /* 往复运动 */
+            /* animation-direction: alternate; */
+            animation-direction: alternate-reverse;
+            /* 动画以外的状态，也就是说不发生动画时候的位置 */
+            animation-fill-mode: forwards;
+            /* 如果动画只播放一次的话,那么该属性值为forwards的时候会停到最后一帧 */
+            /* animation-fill-mode: backwards;  属性值为backwards的时候会动画结束的时候会停到第一帧 */
+            /* 动画的播放状态 */
+
+
+        }
+
+        .outer:hover .inner {
+            animation-play-state: paused;
+        }
+
+        /* 定义一组关键帧 */
+        @keyframes anime {
+
+            /* 第一帧 */
+            from {}
+
+            /* 最后一帧 */
+            to {
+                transform: translate(900px);
+                border-radius: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+</body>
+
+</html>

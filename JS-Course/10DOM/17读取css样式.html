@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改css样式</title>
+    <style>
+        .box1 {
+            
+            height: 200px;
+            background-color: #bfa !important;
+            /* 获得最高的优先级,优先级超过内联样式 */
+
+        }
+        .box1::before {
+            content: "hello";
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="btn">点我一下</button>
+    <hr>
+    <div class="box1"></div>
+    <script>
+        /* 
+            点击按钮之后读取元素的css样式
+            
+        
+        */
+        //    获取按钮
+        const btn = document.getElementById("btn");
+        const box1 = document.querySelector(".box1");
+        btn.onclick = function () {
+            //修改box1的样式
+            // 修改样式的方式: 元素.style.样式名 = 样式值 
+            // 如果样式名中含有-,则需要将样式表修改为驼峰命名法
+            // box1.style.width = "600px";
+            box1.style.backgroundColor = "green";
+            console.log(box1.style.width); //使用这种方式只能读取box1的内联样式
+            /* 
+                    getComputedStyle()
+                        -它会返回一个一个对象,  这个对象中包含了当前元素所有的生效的样式
+                        -参数:
+                            1.要获取样式的对象
+                            2.要获取的伪元素
+                        -返回值:
+                            返回的一个对象,对象中存储了当前元素的样式
+                        -注意:
+                            样式对象中返回的样式值,不一定能拿来直接进行计算
+                                所以使用时,一定要确保值是可以计算的才去计算
+            */
+            const styleObj = getComputedStyle(box1);
+            console.log(styleObj);
+            //获取指定属性
+            console.log("styleObj.width" + styleObj.width); //这里获得的是谁生效读取谁
+            console.log("styleObj.left" + styleObj.left);
+            
+            const beforeStyle = getComputedStyle(box1,"::before");
+            /* 
+                    注意:这里的getComputedStyle所获取到的属性值都是带单位的不可以直接使用
+                    所以如果说要使用的话可以先使用parseInt转换为整数后再进行使用
+
+            */
+            
+        }
+    </script>
+</body>
+
+</html>

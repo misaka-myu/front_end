@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多列布局案例</title>
+    <style>
+        .outer {
+            width: 1000px;
+            margin: 0 auto;
+            /* 直接指定列数 */
+
+            /* column-count: 3; */
+            /* 指定每一列的宽度,会自动计算列数 */
+            /* column-width: 250px; */
+            /* 复合使用,能同时指定列宽和列数,不推荐使用 */
+            columns: 3 220px;
+            /* 调整列间距 */
+            column-gap: 20px;
+            /* 每一列的边框宽度 */
+            /* column-rule-width: 2px;
+            /* 每一列边框的风格 */
+            column-rule-style: dashed;
+            /* 每一列边框的颜色 */
+            column-rule-color: red; 
+            /* 边框相关的复合属性 */
+            column-rule: 2px dashed red;
+
+
+        }
+        h1 {
+            column-span: none;
+            text-align: center;
+            font-size: 40px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <h1>
+
+        </h1>
+    </div>
+</body>
+
+</html>

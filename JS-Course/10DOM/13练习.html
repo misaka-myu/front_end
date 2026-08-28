@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>练习</title>
+    <style>
+        .outer {
+            text-align: center;
+
+        }
+
+        .tb {
+            border: 1px solid black;
+            margin: 50px auto;
+            border-collapse: collapse;
+            font-style: 50px;
+        }
+
+        .tb th,
+        .tb td {
+            border: 1px solid black;
+            padding: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="outer">
+        <table class="tb">
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>邮件</th>
+                    <th>薪资</th>
+                    <th>操作</th>
+                </tr>
+
+
+            </thead>
+            <tbody>
+                <tr>
+                    <td>孙悟空</td>
+                    <td>swk@hgs.com</td>
+                    <td>10000</td>
+                    <td><a href="javascript:;">删除</a></td>
+                    <!-- 上面a标签中的含义是执行一个空的javascript语句 -->
+                </tr>
+                <tr>
+                    <td>猪八戒</td>
+                    <td>zbj@glz.com</td>
+                    <td>8000</td>
+                    <td><a href="#">删除</a></td>
+                </tr>
+                <tr>
+                    <td>沙和尚</td>
+                    <td>shs@lsh.com</td>
+                    <td>6000</td>
+                    <td><a href="#">删除</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <form action="#">
+            <div>
+                <label for="name">姓名</label>
+                <input type="text" id="name">
+            </div>
+            <div>
+                <label for="email">邮件</label>
+                <input type="text" id="email">
+            </div>
+            <div>
+                <label for="salary">薪资</label>
+                <input type="text" id="salary">
+            </div>
+            <button type="submit" id="btn">添加</button>
+        </form>
+    </div>
+    <script>
+        function delEmpHandler() {
+            // 删除当前员工信息，也就是删除当前超链接所在的tr
+            // console.log(this);
+            const tr = this.parentNode.parentNode
+            // 弹出一个友好的提示
+            // 获取要删除的员工的姓名
+            const empName = tr.getElementsByTagName("td")[0].textContent
+            let flag = confirm("确认要删除" + empName + "吗");
+            if (flag) {
+                tr.remove()
+            }
+
+
+
+
+
+
+            return false;
+
+        }
+        const links = document.links
+        for (let i = 0; i < links.length; i++) {
+            // 本练习中的超链接我们是不希望发生跳转的,但是跳转行为是超链接的默认行为
+            // 只要点击超链接就会触发页面的跳转,事件中可以通过取消默认行为来阻止超链接的跳转
+            // 在事件的响应函数中return  false来取消默认行为
+            // 使用return false来取消默认行为,只在 xxx.xxx = function(){}这种形式绑定的事件中才适用
+            links[i].onclick = delEmpHandler;
+            // links[i].addEventListener("click",function(){
+            //     alert("123");
+            //     return false; //无法取消默认行为
+            // })
+
+        }
+        /* 
+            点击按钮后将用户的信息插入到表格中
+        */
+        const btn = document.getElementById("btn");
+        const tbody = document.querySelector("tbody");
+        btn.onclick = function () {
+            // 获取用户输入的数据
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const salary = document.getElementById("salary").value;
+            alert(name + "---" + email + "----" + salary);
+            // 点击按钮后默认跳转,解决方式,更改button按钮的类型,或者取消默认行为
+            // 将获取到的数据设置成DOM对象
+            // 这种写法容易被xss注入攻击
+            tbody.insertAdjacentHTML(
+                "beforeend",`
+                    <tr>
+                        <td>${name}</td>
+                        <td>${email}</td>
+                        <td>${salary}</td>
+                        <td><a href="javascript:;">删除</a></td>
+                    
+                    </tr>
+            `)
+            // 由于上边的超链接是新添加的,所以它的上边并没有绑定单击响应函数,所以新添加的员工无法删除
+            //解决方式:为新添加的超链接单独绑定相应函数
+            links[links.length - 1].onclick = delEmpHandler;
+            return false;
+
+        }
+    </script>
+</body>
+
+</html>

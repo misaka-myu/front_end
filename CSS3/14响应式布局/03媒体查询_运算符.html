@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>媒体查询_运算符</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            height: 200px;
+            background-color: gray;
+            text-align: center;
+            line-height: 200px;
+            font-size: 100px;
+        }
+        /* 检测到视口的宽度为800px时,应用如下样式 */
+        @media (width:800px) {
+            h1 {
+                background-color: green;
+            }
+        }
+        /* 检测到视口的宽度小于等于700个像素时应用如下样式 */
+        @media (max-width:700px) {
+            h1 {
+                background-color: orange;
+            }
+        }
+        /* 检测到视口宽度大于等于900px时,应用如下样式 */
+        @media (min-width:900px) {
+            h1 {
+                background-color: deepskyblue;
+            }
+        }
+        /* 当视口的高度等于800px时应用如下样式 */
+        @media (height:800px) {
+                h1 {
+                    background-color: yellow;
+                }
+        }
+        /* 且运算符 */
+        /* @media (min-width:800px)  and (max-width:900px) {
+            h1 {
+                background-color: orange;
+            }
+        } */
+
+        @media screen and (min-width:800px)  and (max-width:900px) {
+            h1 {
+                background-color: orange;
+            }
+        }
+        
+        /* 或运算符 */
+        /* @media (max-width:700px),(min-width:800px) {
+            h1 {
+                background-color: orange;
+            }
+        } */
+        @media (max-width:700px) or (min-width:800px) {
+            h1 {
+                background-color: orange;
+            }
+        } 
+        
+        /* 否定运算符 */
+        @media not screen {
+            h1 {
+                background-color: orange;
+            }
+        }
+        /* 肯定运算符 */
+        @media only screen {
+            h1 {
+                background-color: orange;
+            }
+        }
+        
+
+
+        
+    </style>
+</head>
+<body>
+    <h1>你好呀</h1>
+</body>
+</html>

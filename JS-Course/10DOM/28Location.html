@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location</title>
+</head>
+<body>
+    <button id="btn">点我一下</button>
+    
+    <script>
+        const btn = document.getElementById("btn");
+        btn.addEventListener("click",() => {
+            /* 
+                location表示的是浏览器地址栏的信息
+                    -可以直接将location的值修改为一个新的地址,这样会使得网页发生跳转
+                    -location.href() 可以获取当前的地址
+                    -location.assign() 跳转到一个新的地址
+                    -location.replace() 跳转到一个新的地址(无法通过回退按钮回退)
+                    -location.reload() 重新加载(刷新页面),可以传递一个true来强制清缓存刷新
+            */
+            console.log(location);
+            // 浏览器地址
+            console.log(location.href);
+            
+            
+        })
+    </script>
+</body>
+</html>

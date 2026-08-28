@@ -31,6 +31,14 @@
                     -用来过滤数组中的元素
                     -将数组中符合条件的元素保存到一个新数组中返回
                     -非破坏行方法,不会影响原数组,会返回一个新的数组
+                map()
+                    -根据当前数组生成一个新数组
+                    -需要一个回调函数作为参数
+                        回调函数会成为新数组中的元素
+                    -非破坏行方法,不会影响原数组
+                reduce()
+                    -可以用来将数组中的所有元素整合成一个值
+                
                     
 
         
@@ -41,16 +49,24 @@
         // arr = ['孙悟空', '猪八戒', '唐僧']
         arr.forEach(() => {
             console.log(123);
-            
+
         })
         // arr.forEach((element,index,array) => {
 
         // })
         console.log(arr);
-        
-        let result  = arr.filter(ele => ele % 2 === 0)
+
+        let result = arr.filter(ele => ele % 2 === 0)
         console.log(result);
-        
+        result = arr.reduce((a,b) => {
+            /* 
+                
+            
+            */
+           return a * b
+        })
+        resutlt = arr.reduce((a,b) => a + b,10)
+        // 这里的10是初始值
 
     </script>
 </head>

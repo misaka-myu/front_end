@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bind</title>
+    <script>
+        /* 
+            bind()是函数的方法,可以用来创建一个新的函数
+                -bind可以为新函数绑定this
+                -通过bind返回的函数,this由bind第一个参数决定(无法修改)
+                -bind可以为新函数绑定参数,这个参数绑定了就固定了,传参的时候会自动忽略这个参数
+            箭头函数没有自身的this,他的this由外层作用域决定
+                也无法通过call,apply和bind修改他的this
+                箭头函数中没有arguments
+        */
+       function fn(){
+            console.log('函数执行了~~~');
+            
+       }
+       const obj = {name:'孙悟空'}
+       const newFn = fn.bind(obj)
+       newFn()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
